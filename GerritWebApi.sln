@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{08AB435F-4E9E-4C5A-B4B5-DA2C1D42EDCE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{528D3EC2-63BA-45D8-8AAF-672959F2869C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GerritWebApi90", "Src\GerritWebApi90\GerritWebApi90.csproj", "{6D824547-30DD-432E-8252-D4129F9E901B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GerritWebApi80", "Src\GerritWebApi80\GerritWebApi80.csproj", "{DF585BF4-445E-4CD9-BD3A-A31FDED1EC61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GerritWebApiUnitTest80", "Test\GerritWebApiUnitTest80\GerritWebApiUnitTest80.csproj", "{C68CB3CD-01B3-49CD-8BEA-0B3DBA0BA71D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GerritWebApiUnitTest90", "Test\GerritWebApiUnitTest90\GerritWebApiUnitTest90.csproj", "{CB485B1F-7483-47BA-9429-554F3706A3E1}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "GerritWebApiShare", "Src\GerritWebApiShare\GerritWebApiShare.shproj", "{5C4F52F7-F6A0-4014-AC0E-7D7188C778EA}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "GerritWebApiUnitTestShare", "Test\GerritWebApiUnitTestShare\GerritWebApiUnitTestShare.shproj", "{EC9DFD07-7CDB-4357-B29C-50F700F69B08}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "WebServiceClientShare", "..\WebServiceClient\Src\WebServiceClientShare\WebServiceClientShare.shproj", "{8CAACB04-9656-4B7C-A692-422FCA51474B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6D824547-30DD-432E-8252-D4129F9E901B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D824547-30DD-432E-8252-D4129F9E901B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D824547-30DD-432E-8252-D4129F9E901B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D824547-30DD-432E-8252-D4129F9E901B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF585BF4-445E-4CD9-BD3A-A31FDED1EC61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF585BF4-445E-4CD9-BD3A-A31FDED1EC61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF585BF4-445E-4CD9-BD3A-A31FDED1EC61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF585BF4-445E-4CD9-BD3A-A31FDED1EC61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C68CB3CD-01B3-49CD-8BEA-0B3DBA0BA71D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C68CB3CD-01B3-49CD-8BEA-0B3DBA0BA71D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C68CB3CD-01B3-49CD-8BEA-0B3DBA0BA71D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C68CB3CD-01B3-49CD-8BEA-0B3DBA0BA71D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB485B1F-7483-47BA-9429-554F3706A3E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB485B1F-7483-47BA-9429-554F3706A3E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB485B1F-7483-47BA-9429-554F3706A3E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB485B1F-7483-47BA-9429-554F3706A3E1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6D824547-30DD-432E-8252-D4129F9E901B} = {08AB435F-4E9E-4C5A-B4B5-DA2C1D42EDCE}
+		{DF585BF4-445E-4CD9-BD3A-A31FDED1EC61} = {08AB435F-4E9E-4C5A-B4B5-DA2C1D42EDCE}
+		{C68CB3CD-01B3-49CD-8BEA-0B3DBA0BA71D} = {528D3EC2-63BA-45D8-8AAF-672959F2869C}
+		{CB485B1F-7483-47BA-9429-554F3706A3E1} = {528D3EC2-63BA-45D8-8AAF-672959F2869C}
+		{5C4F52F7-F6A0-4014-AC0E-7D7188C778EA} = {08AB435F-4E9E-4C5A-B4B5-DA2C1D42EDCE}
+		{EC9DFD07-7CDB-4357-B29C-50F700F69B08} = {528D3EC2-63BA-45D8-8AAF-672959F2869C}
+		{8CAACB04-9656-4B7C-A692-422FCA51474B} = {08AB435F-4E9E-4C5A-B4B5-DA2C1D42EDCE}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Src\GerritWebApiShare\GerritWebApiShare.projitems*{5c4f52f7-f6a0-4014-ac0e-7d7188c778ea}*SharedItemsImports = 13
+		Src\GerritWebApiShare\GerritWebApiShare.projitems*{6d824547-30dd-432e-8252-d4129f9e901b}*SharedItemsImports = 5
+		..\WebServiceClient\Src\WebServiceClientShare\WebServiceClientShare.projitems*{6d824547-30dd-432e-8252-d4129f9e901b}*SharedItemsImports = 5
+		..\WebServiceClient\Src\WebServiceClientShare\WebServiceClientShare.projitems*{8caacb04-9656-4b7c-a692-422fca51474b}*SharedItemsImports = 13
+		Test\GerritWebApiUnitTestShare\GerritWebApiUnitTestShare.projitems*{c68cb3cd-01b3-49cd-8bea-0b3dba0ba71d}*SharedItemsImports = 5
+		Test\GerritWebApiUnitTestShare\GerritWebApiUnitTestShare.projitems*{cb485b1f-7483-47ba-9429-554f3706a3e1}*SharedItemsImports = 5
+		Src\GerritWebApiShare\GerritWebApiShare.projitems*{df585bf4-445e-4cd9-bd3a-a31fded1ec61}*SharedItemsImports = 5
+		..\WebServiceClient\Src\WebServiceClientShare\WebServiceClientShare.projitems*{df585bf4-445e-4cd9-bd3a-a31fded1ec61}*SharedItemsImports = 5
+		Test\GerritWebApiUnitTestShare\GerritWebApiUnitTestShare.projitems*{ec9dfd07-7cdb-4357-b29c-50f700f69b08}*SharedItemsImports = 13
+	EndGlobalSection
+EndGlobal
