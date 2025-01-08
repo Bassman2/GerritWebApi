@@ -9,5 +9,8 @@
     <Import_RootNamespace>GerritWebApi</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Gerrit.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Service\GerritService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Using.cs" />
   </ItemGroup>
 </Project>
