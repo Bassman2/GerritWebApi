@@ -6,6 +6,8 @@
     <Nullable>enable</Nullable>
     <AssemblyName>GerritWebApi</AssemblyName>
     <RootNamespace>GerritWebApi</RootNamespace>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>Bassman.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
