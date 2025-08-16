@@ -29,7 +29,7 @@ internal class GerritService(Uri host, IAuthenticator? authenticator, string app
    
     // application/json (application/vnd.org.jfrog.artifactory.storage.ItemCreated+json)
 
-    protected override string? AuthenticationTestUrl => "/artifactory/api/repositories"; //"/access/api/v1/system/ping";
+    protected override string? AuthenticationTestUrl => "a/config/server/version"; //"/access/api/v1/system/ping";
 
     //protected override async Task ErrorHandlingAsync(HttpResponseMessage response, string memberName, CancellationToken cancellationToken)
     //{
@@ -42,7 +42,7 @@ internal class GerritService(Uri host, IAuthenticator? authenticator, string app
 
     public async Task<string?> GetVersionAsync(CancellationToken cancellationToken)
     {
-        var res = await GetStringAsync("/config/server/version", cancellationToken);
+        var res = await GetStringAsync("a/config/server/version", cancellationToken);
         return res;
     }
 }
