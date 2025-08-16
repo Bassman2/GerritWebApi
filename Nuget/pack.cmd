@@ -1,0 +1,1 @@
+nuget pack GerritWebApi.nuspec -properties Configuration=Release
