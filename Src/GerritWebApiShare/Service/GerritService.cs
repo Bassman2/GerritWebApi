@@ -1,4 +1,6 @@
-﻿namespace GerritWebApi.Service;
+﻿using WebServiceClient;
+
+namespace GerritWebApi.Service;
 
 
 // https://gerrit-review.googlesource.com/Documentation/rest-api.html
@@ -16,6 +18,31 @@ And to access restricted resources with cURL, type the following:
 curl -u username:<http_credentials> https://fqdn/r/a/accounts/self/password.http
   
 */
-internal class GerritService
+
+//https://shm-gerrit.elektrobit.com/Documentation/rest-api-config.html
+
+
+
+internal class GerritService(Uri host, IAuthenticator? authenticator, string appName)
+    : JsonService(host, authenticator, appName, SourceGenerationContext.Default)
 {
+   
+    // application/json (application/vnd.org.jfrog.artifactory.storage.ItemCreated+json)
+
+    protected override string? AuthenticationTestUrl => "/artifactory/api/repositories"; //"/access/api/v1/system/ping";
+
+    //protected override async Task ErrorHandlingAsync(HttpResponseMessage response, string memberName, CancellationToken cancellationToken)
+    //{
+    //    JsonTypeInfo<ErrorsModel> jsonTypeInfoOut = (JsonTypeInfo<ErrorsModel>)context.GetTypeInfo(typeof(ErrorsModel))!;
+    //    var error = await response.Content.ReadFromJsonAsync<ErrorsModel>(jsonTypeInfoOut, cancellationToken);
+
+    //    //var error = await ReadFromJsonAsync<ErrorsModel>(response, cancellationToken);
+    //    throw new WebServiceException(error?.ToString(), response.RequestMessage?.RequestUri, response.StatusCode, response.ReasonPhrase, memberName);
+    //}
+
+    public async Task<string?> GetVersionAsync(CancellationToken cancellationToken)
+    {
+        var res = await GetStringAsync("/config/server/version", cancellationToken);
+        return res;
+    }
 }

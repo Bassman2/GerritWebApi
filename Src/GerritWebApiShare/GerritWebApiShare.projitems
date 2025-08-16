@@ -11,6 +11,7 @@
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Gerrit.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Service\GerritService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Service\Model\SourceGenerationContext.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Using.cs" />
   </ItemGroup>
 </Project>
