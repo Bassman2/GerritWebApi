@@ -14,7 +14,6 @@ public sealed class Gerrit : IDisposable
     /// <param name="storeKey">The key to retrieve the host and token from the key store.</param>
     /// <param name="appName">The name of the application.</param>
     public Gerrit(string storeKey, string appName)
-//        : this(new Uri(KeyStore.Key(storeKey)?.Host!), KeyStore.Key(storeKey)!.Token!, appName)
         : this(new Uri(KeyStore.Key(storeKey)?.Host!), KeyStore.Key(storeKey)!.Login!, KeyStore.Key(storeKey)!.Password!, appName)
     { }
 
@@ -31,7 +30,7 @@ public sealed class Gerrit : IDisposable
 
     public Gerrit(Uri host, string login, string password, string appName)
     {
-        service = new(host, new BasicAuthenticator("Authorization", login, password), appName);
+        service = new(host, new BasicAuthenticator(login, password), appName);
     }
 
     /// <summary>
