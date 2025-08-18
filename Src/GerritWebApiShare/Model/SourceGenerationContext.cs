@@ -1,4 +1,4 @@
-﻿namespace GerritWebApi.Service.Model;
+﻿namespace GerritWebApi.Model;
 
 
 [JsonSourceGenerationOptions]

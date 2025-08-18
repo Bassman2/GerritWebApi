@@ -4,6 +4,5 @@ global using System.Text;
 
 global using WebServiceClient;
 
-global using GerritWebApi.Service;
-global using GerritWebApi.Service.Model;
+global using GerritWebApi.Model;
 
