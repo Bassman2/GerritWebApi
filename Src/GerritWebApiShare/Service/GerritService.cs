@@ -40,9 +40,15 @@ internal class GerritService(Uri host, IAuthenticator? authenticator, string app
     //    throw new WebServiceException(error?.ToString(), response.RequestMessage?.RequestUri, response.StatusCode, response.ReasonPhrase, memberName);
     //}
 
-    public async Task<string?> GetVersionAsync(CancellationToken cancellationToken)
+    public override async Task<Version> GetVersionAsync(CancellationToken cancellationToken)
     {
         var res = await GetStringAsync("a/config/server/version", cancellationToken);
-        return res;
+        return new Version(res!);
+    }
+
+    public override async Task<string> GetVersionStringAsync(CancellationToken cancellationToken)
+    {
+        var res = await GetStringAsync("a/config/server/version", cancellationToken);
+        return res!;
     }
 }

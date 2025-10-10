@@ -1,12 +1,8 @@
-﻿using System.Globalization;
-using System.Xml.Linq;
+﻿namespace GerritWebApi;
 
-namespace GerritWebApi;
-
-
-public sealed class Gerrit : IDisposable
+public sealed class Gerrit : JsonBaseClient
 {
-    private GerritService? service;
+    private readonly GerritService? service;
 
     /// <summary>
     /// Initializes a new instance of the <see cref="Gerrit"/> class using a store key and application name.
@@ -14,7 +10,7 @@ public sealed class Gerrit : IDisposable
     /// <param name="storeKey">The key to retrieve the host and token from the key store.</param>
     /// <param name="appName">The name of the application.</param>
     public Gerrit(string storeKey, string appName)
-//        : this(new Uri(KeyStore.Key(storeKey)?.Host!), KeyStore.Key(storeKey)!.Token!, appName)
+        //        : this(new Uri(KeyStore.Key(storeKey)?.Host!), KeyStore.Key(storeKey)!.Token!, appName)
         : this(new Uri(KeyStore.Key(storeKey)?.Host!), KeyStore.Key(storeKey)!.Login!, KeyStore.Key(storeKey)!.Password!, appName)
     { }
 
@@ -26,33 +22,11 @@ public sealed class Gerrit : IDisposable
     /// <param name="appName">The name of the application.</param>
     public Gerrit(Uri host, string token, string appName)
     {
-        service = new(host, new BearerAuthenticator(token), appName);
+        service = DefineService(new GerritService(host, new BearerAuthenticator(token), appName));
     }
 
     public Gerrit(Uri host, string login, string password, string appName)
     {
-        service = new(host, new BasicAuthenticator("Authorization", login, password), appName);
+        service = DefineService(new GerritService(host, new BasicAuthenticator("Authorization", login, password), appName));
     }
-
-    /// <summary>
-    /// Releases the resources used by the <see cref="Artifactory"/> instance.
-    /// </summary>
-    public void Dispose()
-    {
-        if (this.service != null)
-        {
-            this.service.Dispose();
-            this.service = null;
-        }
-    }
-
-    public async Task<string?> GetVersionAsync(CancellationToken cancellationToken = default)
-    {
-        WebServiceException.ThrowIfNullOrNotConnected(service);
-
-        var res = await service.GetVersionAsync(cancellationToken);
-        res = res?.Trim(')', ']', '}', '\n', '"', '\'');
-        return res;
-    }
-
 }
