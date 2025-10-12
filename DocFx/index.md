@@ -2,14 +2,14 @@
 _layout: landing
 ---
 
-## JenkinsWebApi 
+## GerritWebApi 
 
-JenkinsWebApi is a .NET API for the Jenkins web service.	
+GerritWebApi is a .NET API for the Gerrit web service.	
 		
 ### Getting Started
 
 
-To get started, add the JenkinsWebApi package to your project.
+To get started, add the GerritWebApi package to your project.
 
 
 
