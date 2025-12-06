@@ -1,11 +1,13 @@
 <Solution>
   <Folder Name="/Src/">
     <Project Path="../WebServiceClient/Src/WebServiceClientShare/WebServiceClientShare.shproj" />
+    <Project Path="Src/GerritWebApi100/GerritWebApi100.csproj" />
     <Project Path="Src/GerritWebApi80/GerritWebApi80.csproj" />
     <Project Path="Src/GerritWebApi90/GerritWebApi90.csproj" />
     <Project Path="Src/GerritWebApiShare/GerritWebApiShare.shproj" />
   </Folder>
   <Folder Name="/Test/">
+    <Project Path="Test/GerritWebApiUnitTest100/GerritWebApiUnitTest100.csproj" />
     <Project Path="Test/GerritWebApiUnitTest80/GerritWebApiUnitTest80.csproj" />
     <Project Path="Test/GerritWebApiUnitTest90/GerritWebApiUnitTest90.csproj" />
     <Project Path="Test/GerritWebApiUnitTestShare/GerritWebApiUnitTestShare.shproj" />
